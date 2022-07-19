@@ -7,7 +7,6 @@ import signal
 import random
 from threading import Thread
 import traceback
-import keep_alive
 
 stop = False
 
@@ -41,9 +40,7 @@ def run():
 
 if __name__ == '__main__':
     try:
-      keep_alive.keep_alive()
-      
-      for i in range(300):
+      for i in range(1000):
         try:
           Thread(target=run).start()
         except:
